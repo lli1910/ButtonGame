@@ -12,8 +12,12 @@ import javafx.stage.Stage;
  
 public class FastClicker extends Application {
     public static void main(String[] args) {
-        launch(args);
+        extracted(args);
     }
+
+	private static void extracted(String[] args) {
+		launch(args);
+	}
     
     @Override
     public void start(Stage primaryStage) {
