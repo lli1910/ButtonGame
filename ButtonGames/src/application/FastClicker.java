@@ -14,7 +14,7 @@ public class FastClicker extends Application {
     public static void main(String[] args) {
         extracted(args);
     }
-	public int x = 0;
+	public int count = 0;
 
 	private static void extracted(String[] args) {
 		launch(args);
@@ -29,9 +29,8 @@ public class FastClicker extends Application {
         
             @Override
             public void handle(ActionEvent event) {
-            	
-            	x++;
-                System.out.println(x);
+            	count++;
+                System.out.println(count);
             }
             
         });
@@ -40,5 +39,7 @@ public class FastClicker extends Application {
         root.getChildren().add(btn);
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();
+
+        //put at the end System.out.println("Your number of clicks is " + count);
     }
 }
