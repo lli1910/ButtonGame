@@ -14,6 +14,7 @@ public class FastClicker extends Application {
     public static void main(String[] args) {
         extracted(args);
     }
+	public int x = 0;
 
 	private static void extracted(String[] args) {
 		launch(args);
@@ -25,11 +26,14 @@ public class FastClicker extends Application {
         Button btn = new Button();
         btn.setText("Click me!");
         btn.setOnAction(new EventHandler<ActionEvent>() {
- 
+        
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+            	
+            	x++;
+                System.out.println(x);
             }
+            
         });
         
         StackPane root = new StackPane();
