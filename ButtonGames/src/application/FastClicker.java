@@ -9,8 +9,19 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.scene.control.Label;
+import javafx.scene.text.Font;
+import javafx.util.Duration;
  
-public class FastClicker extends Application {
+public class FastClicker extends Application 
+{
+	private static final int startTime = 10;
+	private Timeline timeline;
+	private int seconds = startTime;
+	private Label timerlabel = new Label ();
+	
     public static void main(String[] args) {
         extracted(args);
     }
@@ -21,14 +32,17 @@ public class FastClicker extends Application {
 	}
     
     @Override
-    public void start(Stage primaryStage) {
-        primaryStage.setTitle("Hello World!");
+    public void start(Stage primaryStage) 
+    {
+    	label = new Label();
+        primaryStage.setTitle("Click-O-Mania");
         Button btn = new Button();
         btn.setText("Click me!");
         btn.setOnAction(new EventHandler<ActionEvent>() {
         
             @Override
             public void handle(ActionEvent event) {
+            	
             	count++;
                 System.out.println(count);
             }
@@ -39,7 +53,5 @@ public class FastClicker extends Application {
         root.getChildren().add(btn);
         primaryStage.setScene(new Scene(root, 300, 250));
         primaryStage.show();
-
-        //put at the end System.out.println("Your number of clicks is " + count);
     }
 }
