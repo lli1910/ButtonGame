@@ -14,6 +14,7 @@ import javafx.animation.Timeline;
 import javafx.scene.control.Label;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
+import javafx.animation.AnimationTimer;
  
 public class FastClicker extends Application 
 {
